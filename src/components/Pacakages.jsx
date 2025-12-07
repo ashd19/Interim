@@ -1,7 +1,7 @@
 import { CircleStop } from "lucide-react"
 export default function Pacakages() {
     return (
-        <div className="w-full h-screen relative overflow-hidden">
+        <div className="w-full  h-screen relative overflow-hidden">
             <div className="flex absolute top-0 left-0 translate-x-168 translate-y-20 ">
                 <div>
                     <CircleStop height={12} width={12} className="mt-0.5 mr-1" />
