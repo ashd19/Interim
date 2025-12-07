@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Instagram,
   Facebook,
@@ -6,8 +7,8 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
-
 const Footer = () => {
+  const [current, setCurrent] = useState("white")
   return (
     <div className="">
       <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
@@ -26,10 +27,12 @@ const Footer = () => {
                 ].map(({ name, component: Icon }, index) => (
                   <div
                     key={index}
-                    className="bg-[#2b413b] text-white flex flex-col h-[130px] w-[190px] items-center justify-center mb-3  border-2 border-none rounded-xl gap-3"
+                    onMouseEnter={() => setCurrent("#f2ac83")}
+                    onMouseLeave={() => setCurrent("white")}
+                    className="bg-[#2b413b]  text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-none rounded-xl gap-3 "
                   >
                     <div>
-                      <Icon />
+                      <Icon color={current} />
                     </div>
                     <h1 className="">{name}</h1>
                   </div>
