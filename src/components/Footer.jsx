@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 import {
   Instagram,
   Facebook,
@@ -8,6 +9,7 @@ import {
   Linkedin,
 } from "lucide-react";
 const Footer = () => {
+  motion;
   const [ hoveredIndex,setHoveredIndex] = useState(null);
   return (  
     <div className="">
@@ -25,7 +27,16 @@ const Footer = () => {
                   { name: "Linkedin", component: Linkedin },
                   { name: "Twitter", component: Twitter },
                 ].map(({ name, component: Icon }, index) => (
-                  <div
+                  <motion.div
+                   initial={{
+                    height:"130px",
+                    width:"190px"
+                   }}
+                    animate={{
+                      height: hoveredIndex === index ? "110px" : "130px",
+                      width: hoveredIndex === index ? "170px" : "190px",
+                    }}
+                    transition={{ duration: 1  }}
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -35,7 +46,7 @@ const Footer = () => {
                       <Icon className={ hoveredIndex === index ? "text-[#f2ac83]" : "text-white" } />
                     </div>
                     <h1 className="">{name}</h1>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <h1 className="mt-3">Subscribe to the newsletter</h1>
