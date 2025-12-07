@@ -38,7 +38,7 @@ const Client = () => {
             x: "-50%",
           }}
           transition={{
-            duration: 10,
+            duration: 12,
             ease: "linear",
             repeat: Infinity,
           }}

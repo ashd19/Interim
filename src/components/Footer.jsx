@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { motion } from "motion/react";
 import {
   Instagram,
   Facebook,
@@ -6,9 +8,10 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
-
 const Footer = () => {
-  return (
+  motion;
+  const [ hoveredIndex,setHoveredIndex] = useState(null);
+  return (  
     <div className="">
       <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
         <div className="px-10 ">
@@ -24,15 +27,26 @@ const Footer = () => {
                   { name: "Linkedin", component: Linkedin },
                   { name: "Twitter", component: Twitter },
                 ].map(({ name, component: Icon }, index) => (
-                  <div
+                  <motion.div
+                   initial={{
+                    height:"130px",
+                    width:"190px"
+                   }}
+                    animate={{
+                      height: hoveredIndex === index ? "110px" : "130px",
+                      width: hoveredIndex === index ? "170px" : "190px",
+                    }}
+                    transition={{ duration: 1  }}
                     key={index}
-                    className="bg-[#2b413b] text-white flex flex-col h-[130px] w-[190px] items-center justify-center mb-3  border-2 border-none rounded-xl gap-3"
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    className="bg-[#2b413b]  text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-none rounded-xl gap-3 "
                   >
                     <div>
-                      <Icon />
+                      <Icon className={ hoveredIndex === index ? "text-[#f2ac83]" : "text-white" } />
                     </div>
                     <h1 className="">{name}</h1>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <h1 className="mt-3">Subscribe to the newsletter</h1>
