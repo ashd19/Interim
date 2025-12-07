@@ -8,8 +8,8 @@ import {
   Linkedin,
 } from "lucide-react";
 const Footer = () => {
-  const [current, setCurrent] = useState("white")
-  return (
+  const [ hoveredIndex,setHoveredIndex] = useState(null);
+  return (  
     <div className="">
       <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
         <div className="px-10 ">
@@ -27,12 +27,12 @@ const Footer = () => {
                 ].map(({ name, component: Icon }, index) => (
                   <div
                     key={index}
-                    onMouseEnter={() => setCurrent("#f2ac83")}
-                    onMouseLeave={() => setCurrent("white")}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                     className="bg-[#2b413b]  text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-none rounded-xl gap-3 "
                   >
                     <div>
-                      <Icon color={current} />
+                      <Icon className={ hoveredIndex === index ? "text-[#f2ac83]" : "text-white" } />
                     </div>
                     <h1 className="">{name}</h1>
                   </div>
