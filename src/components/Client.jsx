@@ -42,7 +42,7 @@ const Client = () => {
             ease: "linear",
             repeat: Infinity,
           }}
-          className="flex flex-shrink-0"
+          className="flex shrink-0"
         >
           {[...clients, ...clients].map(({ image, text }, index) => (
             <div
