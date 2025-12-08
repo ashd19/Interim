@@ -119,7 +119,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="relative">
-          <h1 className="relative text-[#f2ac83] mr-8 text-[24vw] font-extrabold tracking-tighter font-sans">
+          <h1 className="relative text-[#f2ac83] mr-8 text-[24vw] font-extrabold tracking-tighter ">
             interim
             <div
               className="h-0.5 w-[1200px] ml-25 bg-neutral-500/90
