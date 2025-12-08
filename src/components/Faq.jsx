@@ -1,7 +1,6 @@
 import { CircleStop } from "lucide-react";
 import Faqcomp from "../subcomponents/Faqcomp";
 import { useState } from "react";
-import { div, p } from "motion/react-client";
 
 const Faq = () => {
   const [show, setShow] = useState(false);
@@ -73,7 +72,7 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-y-auto">
       <div className="flex gap-5  justify-between">
         <div className="flex flex-col justify-start  ">
           <div className="flex justify-start  ">
