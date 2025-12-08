@@ -6,11 +6,14 @@ import Faq from "./components/Faq";
 
 import { Mail, Phone } from "lucide-react";
 import Navbar from "./components/Navbar";
+import AboutUs from "./components/AboutUs";
 const App = () => {
   return (
     <div className="relative h-screen">
-      <Navbar  />
+      <Navbar />
       <div className="bg-[#fefff2] p-10 ">
+        {/* hero */}
+        <AboutUs />
         <Awards />
         <Pacakages />
         <Client />
