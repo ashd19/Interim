@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 const Footer = () => {
   motion;
-  const [ hoveredIndex,setHoveredIndex] = useState(null);
-  return (  
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  return (
     <div className="">
       <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
         <div className="px-10 ">
@@ -28,22 +28,28 @@ const Footer = () => {
                   { name: "Twitter", component: Twitter },
                 ].map(({ name, component: Icon }, index) => (
                   <motion.div
-                   initial={{
-                    height:"130px",
-                    width:"190px"
-                   }}
+                    initial={{
+                      height: "130px",
+                      width: "190px",
+                    }}
                     animate={{
                       height: hoveredIndex === index ? "110px" : "130px",
                       width: hoveredIndex === index ? "170px" : "190px",
                     }}
-                    transition={{ duration: 1  }}
+                    transition={{ duration: 1 }}
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                     className="bg-[#2b413b]  text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-none rounded-xl gap-3 "
                   >
                     <div>
-                      <Icon className={ hoveredIndex === index ? "text-[#f2ac83]" : "text-white" } />
+                      <Icon
+                        className={
+                          hoveredIndex === index
+                            ? "text-[#f2ac83]"
+                            : "text-white"
+                        }
+                      />
                     </div>
                     <h1 className="">{name}</h1>
                   </motion.div>
@@ -122,12 +128,20 @@ const Footer = () => {
           </h1>
           <div className="flex gap-90 px-20 absolute bottom-0 -translate-y-11  ">
             <div className="flex gap-5 ml-15 ">
-              <h1>Privacy Policy</h1>
-              <h1>Terms</h1>
+               <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+              Privacy Policy
+              </a>
+              <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+             Terms
+              </a>
             </div>
             <div className="flex gap-5 ml-40">
-              <h1>©Template by RealMehdi</h1>
-              <h1 className="ml-4">Built in Framer</h1>
+              <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+                ©Template by RealMehdi
+              </a>
+               <a className="ml-4 hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+              Built in Framer
+              </a>
             </div>
           </div>
         </div>
