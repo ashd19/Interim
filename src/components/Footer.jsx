@@ -61,7 +61,7 @@ const Footer = () => {
                 placeholder="jane@framer.com"
                 className="focus:border  focus:border-blue-600 bg-[#2b413b] p-3 rounded-lg mt-2"
               />
-              <button className="cursor-pointer hover:text-white hover:bg-orange-400/80 submitButton bg-[#f2ac83] text-center text-[#1e3730] h-full w-[610px] font-medium mt-3 rounded-lg py-2">
+              <button className="cursor-pointer hover:text-white hover:bg-orange-400/80  bg-[#f2ac83] text-center text-[#1e3730] h-full w-[610px] font-medium mt-3 rounded-lg py-2">
                 Submit
               </button>
             </div>
