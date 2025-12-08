@@ -2,14 +2,17 @@ import Client from "./components/Client";
 import Footer from "./components/Footer";
 import Pacakages from "./components/Pacakages";
 import Awards from "./components/Awards";
+import Faq from "./components/Faq";
+
 import { Mail, Phone } from "lucide-react";
 const App = () => {
   return (
     <div className="relative h-screen">
-      <div className="bg-neutral-100 p-10 ">
+      <div className="bg-[#fefff2] p-10 ">
         <Awards />
         <Pacakages />
         <Client />
+        <Faq />
         <Footer />
       </div>
       <div className="absolute bottom-0 right-0 flex flex-col justify-end items-center  fixed gap-2 z-999">

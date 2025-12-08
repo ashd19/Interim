@@ -12,7 +12,7 @@ const Footer = () => {
   motion;
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="">
+    <div className=" ">
       <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
         <div className="px-10 ">
           <div className="flex items-center   gap-60">
@@ -128,19 +128,19 @@ const Footer = () => {
           </h1>
           <div className="flex gap-90 px-20 absolute bottom-0 -translate-y-11  ">
             <div className="flex gap-5 ml-15 ">
-               <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
-              Privacy Policy
+              <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+                Privacy Policy
               </a>
               <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
-             Terms
+                Terms
               </a>
             </div>
             <div className="flex gap-5 ml-40">
               <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
                 ©Template by RealMehdi
               </a>
-               <a className="ml-4 hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
-              Built in Framer
+              <a className="ml-4 hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+                Built in Framer
               </a>
             </div>
           </div>
