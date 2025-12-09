@@ -4,10 +4,10 @@ import Card from "../subcomponents/Card";
 const AboutUs = () => {
   return (
     <div className="flex flex-col   ">
-      <div className="w-full  flex gap-[100px] items-start mt-10 justify-center">
-        <div className="flex gap-1 items-center justify-center ">
+      <div className="w-full  flex gap-[155px] items-start mt-10 ">
+        <div className="flex gap-1 items-center justify-start ">
           <CircleStop height={15} width={15} />
-          <h1 className="tracking-tight whitespace-nowrap font-semibold">
+          <h1 className="tracking-tight whitespace-nowrap font-semibold ">
             About Us
           </h1>
         </div>
