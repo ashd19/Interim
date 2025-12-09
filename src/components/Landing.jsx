@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Landing = () => {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 900], [0, -1300]);
+  const y = useTransform(scrollY, [0, 1000], [0, -1300]);
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <motion.div style={{ y, marginBottom: y }} className="vid  mt-50" data-scroll data-scroll-speed="2">
+      <motion.div style={{ y, marginBottom: y }} className="vid  mt-50" data-scroll data-scroll-speed="0.6">
         <video
           src="https://framerusercontent.com/assets/mSsTg3IQcSmGsgmBbKnv84RbHUw.mp4"
           loop

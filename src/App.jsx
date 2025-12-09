@@ -16,10 +16,7 @@ const App = () => {
 
     function raf(time) {
       lenis.raf(time);
-      const debugEl = document.getElementById('lenis-debug');
-      if (debugEl) {
-        debugEl.style.transform = `rotate(${lenis.velocity * 5}deg)`;
-      }
+     
       requestAnimationFrame(raf);
     }
 
@@ -32,13 +29,7 @@ const App = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Lenis Debug Indicator - Delete after checking */}
-      <div
-        id="lenis-debug"
-        className="fixed top-1/2 left-10 z-[9999] w-12 h-12 bg-red-500 rounded flex items-center justify-center text-white font-bold transition-transform duration-75 will-change-transform"
-      >
-        TEST
-      </div>
+     
       <Navbar />
       <div className="bg-[#fefff2] p-10 ">
         <Landing />
