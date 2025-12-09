@@ -34,8 +34,28 @@ const AboutUs = () => {
         </h1>
       </div>
 
-      <div className="flex gap-3 mt-5">
-        <Card />
+      <div className="flex gap-3 mt-5 mb-5">
+        <Card
+          number={200}
+          heading={"Project Completed"}
+          text={
+            "Over 200 successful projects completed, showcasing our extensive experience and portfolio."
+          }
+        />
+        <Card
+          number={15}
+          heading={"Years of Expertise"}
+          text={
+            "With 15 years in the industry, we bring a wealth of knowledge and skill to every project."
+          }
+        />
+        <Card
+          number={150}
+          heading={"Happy Clients"}
+          text={
+            "Proudly serving more than 150 satisfied clients who have trusted us with their interior design needs."
+          }
+        />
       </div>
     </div>
   );

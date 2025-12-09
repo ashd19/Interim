@@ -6,9 +6,19 @@
   font-weight: 800;
   font-style: bold;
 }
+.intercard {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
 .inter-nav {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+@theme{
+  --text-card : 8rem;
 }
