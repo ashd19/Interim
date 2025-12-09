@@ -22,6 +22,7 @@
 @theme{
   --text-card : 8rem;
   --text-hero : 8.5rem;
+  --text-faq: 2.8rem;
 }
 .satisfy-regular {
   font-family: "Satisfy", cursive;

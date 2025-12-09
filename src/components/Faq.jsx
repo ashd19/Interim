@@ -75,11 +75,11 @@ const Faq = () => {
     <div className="h-screen overflow-y-auto">
       <div className="flex gap-5  justify-between">
         <div className="flex flex-col justify-start  ">
-          <div className="flex justify-start  ">
+          <div className="flex justify-start   ">
             <CircleStop height={15} width={15} />
-            <h1 className="text-sm ml-1 ">FREQUENTLY ASKED QUESTIONS</h1>
+            <h1 className="text-sm ml-1  ">FREQUENTLY ASKED QUESTIONS</h1>
           </div>
-          <h1 className="font-bold text-5xl text-[#1d332c] tracking-tighter">
+          <h1 className="font-bold text-faq  leading-10 text-[#1d332c] tracking-tighter">
             Your questions,our answers
           </h1>
         </div>
