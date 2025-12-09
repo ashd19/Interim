@@ -1,7 +1,9 @@
 import { CircleStop } from "lucide-react";
 import Card from "../subcomponents/Card";
+import { motion } from "motion/react";
 
 const AboutUs = () => {
+  motion;
   return (
     <div className="flex flex-col">
       <div className="w-full  flex gap-[155px] items-start mt-10 ">
@@ -22,12 +24,18 @@ const AboutUs = () => {
             with a touch of  whimsy.{" "}
           </h1>
           <div className="flex group w-fit">
-            <div className="flex flex-col">
+            <motion.div className="flex flex-col" whileHover="hover" initial="initial"  >
               <a href="#">
                 <h1 className="inter tracking-wide text-[#1d332c">KNOW MORE </h1>
               </a>
-              <div className="bg-black h-[2.5px] w-[20px] group-hover:w-[100px] delay-100 transition duration-[15s] ease-in inline-block"></div>
-            </div>
+              <motion.div
+                variants={{
+                  initial: { width: "20px" },
+                  hover: { width: "110px", transition: { duration: 0.3, ease: "easeIn" } }
+                }}
+                className="bg-black h-[2.5px] w-[20px] "></motion.div>
+
+            </motion.div>
           </div>
         </div>
       </div>
