@@ -71,6 +71,7 @@ const Faq = () => {
       question: "Will I be able to see the design before its implemented?",
     },
   ];
+   
   return (
     <div className="h-screen overflow-y-auto">
       <div className="flex gap-5  justify-between">

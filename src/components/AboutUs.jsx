@@ -14,15 +14,20 @@ const AboutUs = () => {
         <div className="flex flex-col gap-10">
           <h1 className="text-4xl tracking-wider font- inter-nav  text-[#1d332c]">
             <span className="ml-10"></span>Founded in 2010, our studio started
-            as a small team <br /> of design enthusiasts with big dreams. At
+            as a small team  of design enthusiasts with big dreams. At
             Interim, we're not just <br /> about creating beautiful spaces –
             we're about crafting stories <br /> and making dreams come true! Our
-            passionate team of <br /> design enthusiasts loves turning ordinary
-            rooms into <br /> extraordinary experiences, blending creativity
-            with a touch of <br /> whimsy.{" "}
+            passionate team of  design <br /> enthusiasts loves turning ordinary
+            rooms into  extraordinary experiences, blending creativity
+            with a touch of  whimsy.{" "}
           </h1>
-          <div className="flex">
-            <h1 className="inter tracking-wide">KNOW MORE </h1>
+          <div className="flex group w-fit">
+            <div className="flex flex-col">
+              <a href="#">
+                <h1 className="inter tracking-wide text-[#1d332c">KNOW MORE </h1>
+              </a>
+              <div className="bg-black h-[2.5px] w-[20px] group-hover:w-[100px] delay-100 transition duration-[15s] ease-in inline-block"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +52,7 @@ const AboutUs = () => {
           heading={"Years of Expertise"}
           text={
             "With 15 years in the industry, we bring a wealth of knowledge and skill to every project."
-          } 
+          }
         />
         <Card
           number={150}
