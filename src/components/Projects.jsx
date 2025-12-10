@@ -1,6 +1,6 @@
 
 import { CircleStopIcon } from "lucide-react";
-
+import ProjectCard from "../subcomponents/ProjectCard";
 export default function Projects() {
     return (
         <>
@@ -12,6 +12,10 @@ export default function Projects() {
                     <h1 className=" text-[#1e3730] text-[0.8rem] font-bold interCard tracking-tight uppercase">Our Portfolio</h1>
 
                 </div>
+                <div className="flex flex-col gap-3">
+                    <ProjectCard firstButton="RESIDENTIAL" secondButton="SINGLE HOME" imgurl="" heading={<>Costal Harmony <br />Home </>} text="The Coastal Harmony Home project was a comprehensive renovation of a beachside house, transforming it into a serene and stylish retreat that reflects the client's love for the ocean and nature." />
+                </div>
+
             </div>
         </>
     )
