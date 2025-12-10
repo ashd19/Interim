@@ -47,7 +47,7 @@ const AboutUs = () => {
         </h1>
       </div>
 
-      <div className="cards flex gap-3 mt-5 mb-5">
+      <div className="cards flex gap-3 mt-5 mb-25">
         <Card
           number={200}
           heading={"Project Completed"}

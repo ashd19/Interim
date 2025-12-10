@@ -1,3 +1,4 @@
+import { Mail, Phone } from "lucide-react";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Client from "./components/Client";
@@ -7,16 +8,18 @@ import Awards from "./components/Awards";
 import Faq from "./components/Faq";
 import Landing from "./components/Landing";
 
-import { Mail, Phone } from "lucide-react";
 import Navbar from "./components/Navbar";
 import AboutUs from "./components/AboutUs";
+import Services from "./components/Services";
+
+
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis();
 
     function raf(time) {
       lenis.raf(time);
-     
+
       requestAnimationFrame(raf);
     }
 
@@ -29,11 +32,14 @@ const App = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-     
+
       <Navbar />
       <div className="bg-[#fefff2] p-10 ">
         <Landing />
         <AboutUs />
+      </div>
+      <Services />
+      <div className="bg-[#fefff2] p-10 ">
         <Awards />
         <Pacakages />
         <Client />

@@ -18,11 +18,18 @@
   font-weight: 500;
   font-style: normal;
 }
+.interServices {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 @theme{
   --text-card : 8rem;
   --text-hero : 8.5rem;
   --text-faq: 2.8rem;
+  --text-services:15rem;
 }
 .satisfy-regular {
   font-family: "Satisfy", cursive;
