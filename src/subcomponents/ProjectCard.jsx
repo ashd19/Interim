@@ -17,3 +17,7 @@ export default function ProjectCard({ firstButton, secondButton, imgurl, heading
         </>
     )
 }
+
+/**
+ * 
+ */
