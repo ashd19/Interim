@@ -1,9 +1,7 @@
-import { h1 } from "motion/react-client";
-import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-1111 h-fit  w-full  py-3 px-10 bg-[#fefff2]">
+    <div className="fixed z-1111 h-fit  w-full  py-3 px-10 bg-[#ffff]">
       <div className="">
         <div className="flex justify-between items-center">
           <div>
