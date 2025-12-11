@@ -1,5 +1,18 @@
-import { motion } from "motion/react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+
 const Client = () => {
+  useGSAP(() => {
+    gsap.to('.boxes', {
+      xPercent: -50,
+      repeat: -1,
+      duration: 12,
+      ease: "linear"
+    });
+  }, [])
+
+
   const clients = [
     {
       image:
@@ -33,16 +46,16 @@ const Client = () => {
       < h1 className="text-[1rem] inter-nav mt-10 mr-5">CLIENTS</h1>
       <h1 className="text-5xl inter font-extrabold">Our Beloved Clients</h1>
       <div className="flex mt-10 overflow-hidden w-full mb-60">
-        <motion.div
-          animate={{
-            x: "-50%",
-          }}
-          transition={{
-            duration: 12,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-          className="flex shrink-0"
+        <div
+          // animate={{
+          //   x: "-50%",
+          // }}
+          // transition={{
+          //   duration: 12,
+          //   ease: "linear",
+          //   repeat: Infinity,
+          // }}
+          className="flex shrink-0 boxes"
         >
           {[...clients, ...clients].map(({ image, text }, index) => (
             <div
@@ -56,7 +69,7 @@ const Client = () => {
               <div className="text-[#1d332c] font-bold text-3xl">{text}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
