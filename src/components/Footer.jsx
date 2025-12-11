@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex items-center   gap-60">
             <div className="flex flex-col">
               {/* icon grid  */}
-              <div className="uppercase grid grid-rows-2 grid-cols-3    gap-x-4 mt-10 ">
+              <div className="uppercase grid grid-rows-2 grid-cols-3      gap-x-4 mt-10 ">
                 {[
                   { name: "Instagram", component: Instagram },
                   { name: "Facebook", component: Facebook },
@@ -42,7 +42,7 @@ const Footer = () => {
                     onMouseLeave={() => setHoveredIndex(null)}
                     className="bg-[#2b413b]   text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-transparent hover:border-[#f2ac83] rounded-xl gap-3 "
                   >
-                    <div>
+                    <div className="">
                       <Icon
                         className={
                           hoveredIndex === index

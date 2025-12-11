@@ -1,4 +1,3 @@
-import { Mail, Phone } from "lucide-react";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Client from "./components/Client";
@@ -7,13 +6,13 @@ import Pacakages from "./components/Pacakages";
 import Awards from "./components/Awards";
 import Faq from "./components/Faq";
 import Landing from "./components/Landing";
-
 import Navbar from "./components/Navbar";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Review from "./components/Reviews";
 import Blogs from "./components/Blogs"
+import Specialities from "./components/Specialities";
 
 const App = () => {
   useEffect(() => {
@@ -49,6 +48,11 @@ const App = () => {
         <Awards />
         <Client />
         <Pacakages />
+
+      </div>
+      <div className="p-10">
+        
+        <Specialities />
       </div>
         <Blogs />
      <div className="p-10">

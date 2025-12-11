@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-const Buttons = ({title}) => {
+const Buttons = ({title }) => {
   return (
     <div className="flex gap-1 items-center ">
       <div className="bg-[#15372b] text-white text-center font-semibold rounded-2xl  py-3  w-[150px] inter-nav">
