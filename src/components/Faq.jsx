@@ -97,7 +97,7 @@ const Faq = () => {
               }}
             >
               {/* Render the question */}
-              <Faqcomp text={question} show={show} />
+              <Faqcomp text={question} show={show}  />
 
               {show && (
                 <div className="p-5 overflow-hidden text-xl">

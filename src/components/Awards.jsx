@@ -23,7 +23,7 @@ export default function Awards() {
 
       <div className="flex flex-col gap-3">
         <div className="ml-[200px] flex gap-4">
-          <Badge />
+          <Badge  />
           <Badge />
           <Badge />
         </div>
