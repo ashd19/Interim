@@ -14,9 +14,7 @@ const Landing = () => {
       id: 1,
       name: "Mathews R",
       review: [
-        "I was so happy with the final result.",
-        "The team was professional and delivered on time.",
-        "The design was unique and beautiful.",
+        "I was so happy with the final result.The team was professional and delivered on time.The design was unique and beautiful.",
       ],
       stars: 5,
     },
@@ -24,9 +22,7 @@ const Landing = () => {
       id: 2,
       name: "Samantha",
       review: [
-        "Interim has been a game-changer for our business.",
-        "Their ability to blend modern design with ",
-        "sustainable practices has been invaluable.",
+        "Interim has been a game-changer for our business.Their ability to blend modern design with sustainable practices has been invaluable.",
       ],
       stars: 4,
     },
@@ -34,9 +30,7 @@ const Landing = () => {
       id: 3,
       name: "Tony M",
       review: [
-        "The custom furniture design exceeded","our expectations.",
-        "Each piece is a work of art.",
-        "The design is unique and beautiful.",
+        "The custom furniture design exceeded","our expectations.Each piece is a work of art.The design is unique and beautiful.",
       ],
       stars: 5,
     },
@@ -73,18 +67,22 @@ const Landing = () => {
                 ))}
               </div>
               <p className="inter-nav text-[#1d332c]">
-                "
-                {currentReview.review.map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-                "
-              </p>
-              <p className="inter-nav text-[#1d332c] font-semibold">
+                <span>"</span>
+                {currentReview.review
+                  .join(" ")
+                  .split(/\s+/)
+                  .reduce((acc, word, index) => {
+                    if (index % 6 === 0 && index !== 0) {
+                      acc.push(<br key={`br-${index}`} />);
+                    }
+                    acc.push(word + " ");
+                    return acc;
+                  }, [])}
+                <span>"</span><span className="inter-nav text-[#1d332c] font-semibold">
                 - {currentReview.name}
+              </span>
               </p>
+              
               
             </div>
             <div className="flex gap-3 mt-10">
