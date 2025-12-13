@@ -41,7 +41,7 @@ const App = () => {
         <AboutUs />
       </div>
       <Services />
-      <div className="bg-[#fefff2] p-10 ">
+      <div className="bg-[#fefff2] md:p-10 p-2 ">
         <Projects />
       </div>
       <Review />

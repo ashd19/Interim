@@ -66,11 +66,11 @@ const Landing = () => {
           <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4.3rem]  text-[#1d332c] inter-nav tracking-tight">
             Your Ideas,
             <br />
-            <div className="flex md:flex-row md:tracking-none tracking-tight flex-col ">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
+            <div className="flex md:flex-row md:tracking-none tracking-tight flex-col md:text-[4.3rem] text-[4.1rem]">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
 
           </h1>
         </div>
-        <div className="flex md:flex-row flex-col gap-5 mt-5 items-center justify-between mt-2">
+        <div className="flex md:flex-row flex-col gap-5 mt-5 items-center justify-between ">
           <div>
             <div className="flex flex-col gap-5">
               <div className="flex gap-1">

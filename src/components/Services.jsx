@@ -10,7 +10,7 @@ export default function Services() {
         <>
             <div className="w-full min-h-screen relative bg-[#f6f7e9] px-4 py-4  overflow-hidden">
 
-                <h1 className="md:text-services text-[6.2rem] interServices text-center mt-10 tracking-tight text-[#1e3730]">Services</h1>
+                <h1 className="md:text-services text-[5.8rem] interServices text-center mt-10 tracking-tight text-[#1e3730]">Services</h1>
                 <div className="flex gap-1 absolute top-0 left-1/2 md:-translate-x-65 -translate-x-28 md:translate-y-43 translate-y-23 items-center  justify-center">
                     <CircleStopIcon className="w-3 h-3 mb-[0.2rem]" />
                     <h1 className=" text-[#1e3730] text-[0.9rem] font-bold tracking-wide">WHAT WE DO</h1>
