@@ -68,12 +68,12 @@ const Faq = () => {
           <div className="flex flex-col justify-start lg:sticky lg:top-8 w-full lg:w-[600px]">
             <div className="flex items-center  mb-4">
               <CircleStop height={15} width={15} className="text-[#1d332c]" />
-              <h2 className="text-[0.8rem]    inter tracking-wider text-[#1d332c]">
+              <h2 className="text-[0.8rem]    inter   tracking-wider text-[#1d332c]">
                 FREQUENTLY ASKED QUESTIONS
               </h2>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold md:leading-3  leading-none text-[#1d332c] tracking-tight">
-              Your questions, our answers
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold md:leading-12  leading-none text-[#1d332c] tracking-tighter md:whitespace-nowrap">
+              Your questions,our answers
             </h1>
           </div>
 
