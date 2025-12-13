@@ -36,7 +36,7 @@ const App = () => {
     <div className="relative min-h-screen w-full overflow-hidden">
 
       <Navbar />
-      <div className="bg-[#fefff2] p-10 ">
+      <div className="bg-[#fefff2] md:p-10  p-3">
         <Landing />
         <AboutUs />
       </div>

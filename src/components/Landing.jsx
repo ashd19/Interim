@@ -51,13 +51,14 @@ const Landing = () => {
     <div>
       <div className="w-full">
         <div className="mt-35">
-          <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4rem]  text-[#1d332c] inter-nav tracking-tight">
+          <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4.5rem]  text-[#1d332c] inter-nav tracking-tight">
             Your Ideas,
             <br />
-            Our Creative <span className="satisfy-regular">Twist</span>
+            <div className="flex md:flex-row flex-col">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
+
           </h1>
         </div>
-        <div className="flex items-center justify-between mt-2">
+        <div className="flex md:flex-row flex-col gap-5 mt-5 items-center justify-between mt-2">
           <div>
             {/* Show current review */}
             <div className="flex flex-col gap-5">
