@@ -1,32 +1,51 @@
 import Buttons from "./Buttons";
 import { Star } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Landing = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -1300]);
 
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
   const reviews = [
     {
       id: 1,
       name: "Mathews R",
-      review: "I was so happy with the final result. The team was professional and delivered on time.",
+      review: [
+        "I was so happy with the final result.The team was professional and delivered on time.The design was unique and beautiful.",
+      ],
       stars: 5,
     },
     {
       id: 2,
       name: "Samantha",
-      review: "Interim has been a game-changer for our business.Their ability to blend modern design with sustainable practices has been invaluable.",
+      review: [
+        "Interim has been a game-changer for our business.Their ability to blend modern design with sustainable practices has been invaluable.",
+      ],
       stars: 4,
     },
     {
       id: 3,
       name: "Tony M",
-      review: "The custom furniture design exceeded our expectations.Each piece is a work of art.",
+      review: [
+        "The custom furniture design exceeded","our expectations.Each piece is a work of art.The design is unique and beautiful.",
+      ],
       stars: 5,
-    }
-  ]
+    },
+  ];
 
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [reviews.length]);
+
+  const currentReview = reviews[currentReviewIndex];
 
   return (
     <div>
@@ -40,17 +59,42 @@ const Landing = () => {
         </div>
         <div className="flex items-center justify-between mt-2">
           <div>
-            {/* show based on index  */}
-            {reviews.map(({ id, name, review, stars }) => (
-              <div key={id} className="flex flex-col gap-5">
-                <div className="flex gap-1">
-                  {Array.from({ length: stars }).map((_, index) => (
-                    <Star key={index} color="#f2ac83" />
-                  ))}
-                </div>
+            {/* Show current review */}
+            <div className="flex flex-col gap-5">
+              <div className="flex gap-1">
+                {Array.from({ length: currentReview.stars }).map((_, index) => (
+                  <Star key={index} color="#f2ac83" fill="#f2ac83" />
+                ))}
               </div>
-
-            ))}
+              <p className="inter-nav text-[#1d332c]">
+                <span>"</span>
+                {currentReview.review
+                  .join(" ")
+                  .split(/\s+/)
+                  .reduce((acc, word, index) => {
+                    if (index % 6 === 0 && index !== 0) {
+                      acc.push(<br key={`br-${index}`} />);
+                    }
+                    acc.push(word + " ");
+                    return acc;
+                  }, [])}
+                <span>"</span><span className="inter-nav text-[#1d332c] font-semibold">
+                - {currentReview.name}
+              </span>
+              </p>
+              
+              
+            </div>
+            <div className="flex gap-3 mt-10">
+              {reviews.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-[25px] h-[4px] rounded-2xl border transition-colors ${
+                    index === currentReviewIndex ? "bg-[#1d332c]" : "bg-[#f6f7e9]"
+                  }`}
+                ></div>
+              ))}
+            </div>
           </div>
           <div className="p-5 bg-[#f6f7e9] w-[400px] h-full rounded-xl ">
             <p className="text-[#4b5a54] inter-nav text-xl">
@@ -58,22 +102,27 @@ const Landing = () => {
               we craft beautiful, functional spaces that stand the test of time.
             </p>
             <div className="mt-4">
-              <Buttons title={'Buy Template'}/>
+              <Buttons title={"Buy Template"} />
             </div>
           </div>
         </div>
       </div>
-      <motion.div style={{ y, marginBottom: y }} className="vid  mt-50 " data-scroll data-scroll-speed="0.6">
+      <motion.div
+        style={{ y, marginBottom: y }}
+        className="vid mt-50 "
+        data-scroll
+        data-scroll-speed="0.6"
+      >
         <video
           src="https://framerusercontent.com/assets/mSsTg3IQcSmGsgmBbKnv84RbHUw.mp4"
           loop
           playsInline
           muted
           preload="auto"
-          className="w-full h-full object-cover rounded-xl shadow-top-only shadb     w-white"
+          className="w-full h-full object-cover rounded-xl shadow-top-only "
         ></video>
       </motion.div>
-    </div >
+    </div>
   );
 };
 

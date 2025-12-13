@@ -7,9 +7,12 @@ const Faq = () => {
   const answers = [
     {
       id: 1,
-      answer:
-        "We offer a range of interior design services including space planning, 3D rendering, furniture selection, color consultation, lighting design, custom cabinetry, and full project management from concept to completion.",
-    },
+      answer:[
+        "We offer a range of interior design ",
+        "services including space planning, 3D rendering, furniture selection, color consultation, lighting design, custom cabinetry, ","and full project management from concept to completion.",
+      ]
+      },
+    
     {
       id: 2,
       answer:
@@ -84,7 +87,7 @@ const Faq = () => {
             Your questions,our answers
           </h1>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2" onClick={()=>{setShow(!show)}}>
           {questions.map(({ id, question }) => (
             <div
               key={id}
@@ -94,14 +97,15 @@ const Faq = () => {
               }}
             >
               {/* Render the question */}
-              <Faqcomp text={question} />
+              <Faqcomp text={question} show={show} />
 
-              {/* Conditionally render the corresponding answer
               {show && (
-                <div className="p-5">
+                <div className="p-5 overflow-hidden text-xl">
                   <p>{answers.find((answer) => answer.id === id)?.answer}</p>
-                </div> */}
-              {/* )} */}
+                </div> 
+                
+              )}
+              
             </div>
           ))}
         </div>

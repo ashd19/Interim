@@ -13,7 +13,7 @@ const Footer = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <div className=" ">
-      <div className="bg-[#1e3730] text-white min-h-screen  w-full py-3  flex flex-col ">
+      <div className="bg-[#1e3730] rounded-xl text-white min-h-screen  w-full py-3  flex flex-col ">
         <div className="px-10 ">
           <div className="flex items-center   gap-60">
             <div className="flex flex-col">
