@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex items-center   gap-60">
             <div className="flex flex-col">
               {/* icon grid  */}
-              <div className="uppercase grid grid-rows-2 grid-cols-3      gap-x-4 mt-10 ">
+              <div className="uppercase grid md:grid-rows-2 md:grid-cols-3 sm:grid-rows-6 sm:grid-cols-1      md:gap-x-4 mt-10 ">
                 {[
                   { name: "Instagram", component: Instagram },
                   { name: "Facebook", component: Facebook },
@@ -27,20 +27,11 @@ const Footer = () => {
                   { name: "Linkedin", component: Linkedin },
                   { name: "Twitter", component: Twitter },
                 ].map(({ name, component: Icon }, index) => (
-                  <motion.div
-                    initial={{
-                      height: "130px",
-                      width: "190px",
-                    }}
-                    animate={{
-                      height: hoveredIndex === index ? "110px" : "130px",
-                      width: hoveredIndex === index ? "170px" : "190px",
-                    }}
-                    transition={{ duration: 1 }}
+                  <div
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className="bg-[#2b413b]   text-white flex flex-col h-[130px] w-[190px] hover:h-[110px] hover:w-[170px] duration-2000 transition ease in items-center justify-center mb-3  border-2 border-transparent hover:border-[#f2ac83] rounded-xl gap-3 "
+                    className="bg-[#2b413b]   text-white flex flex-col md:h-[130px] md:w-[190px] h-[65px] w-[55px] hover:scale-90  duration-1000 transition ease-in items-center justify-center mb-3  border-2 border-transparent hover:border-[#f2ac83] rounded-xl gap-3 "
                   >
                     <div className="">
                       <Icon
@@ -52,14 +43,14 @@ const Footer = () => {
                       />
                     </div>
                     <h1 className="">{name}</h1>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
               <h1 className="mt-3">Subscribe to the newsletter</h1>
               <input
                 type="text"
                 placeholder="jane@framer.com"
-                className="focus:border  focus:border-blue-600 bg-[#2b413b] p-3 rounded-lg mt-2"
+                className="focus:border  focus:border-blue-600 bg-[#2b413b] p-3 rounded-lg mt-2   "
               />
               <button className="cursor-pointer hover:text-white hover:bg-orange-400/80  bg-[#f2ac83] text-center text-[#1e3730] h-full w-[610px] font-medium mt-3 rounded-lg py-2">
                 Submit

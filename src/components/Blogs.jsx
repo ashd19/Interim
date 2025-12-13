@@ -12,13 +12,13 @@ export default function Blogs() {
 
         </div>
 
-      <div className='px-5 grid grid-cols-2 grid-rows-2 gap-4 mb-20'>
-        <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"}  date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
-        <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"}  date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
-        <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"}  date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
-        <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"}  date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
-       
-      </div>
+        <div className='px-10 grid grid-cols-2 grid-rows-2  gap-4 mb-20'>
+          <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
+          <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
+          <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
+          <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
+
+        </div>
 
       </div>
     </>

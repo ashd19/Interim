@@ -61,8 +61,8 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f7e9] p-4 sm:p-6 lg:p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-[#f6f7e9] p-4 sm:p-6 lg:p-8 mb-20 pb-1 ">
+      <div className="max-w-7xl mx-auto mb-15 ">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between items-start">
           {/* Left side - Header */}
           <div className="flex flex-col justify-start lg:sticky lg:top-8 w-full lg:w-[600px]">

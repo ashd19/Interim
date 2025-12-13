@@ -49,20 +49,21 @@ const App = () => {
         <Awards />
         <Client />
         <Pacakages />
-
       </div>
       <div className="p-10">
 
-        <Specialities />
+        {/* <Specialities /> */}
       </div>
       <Blogs />
-      <div className="p-10">
+      <div className="bg-[#fefff2] ">
 
         <Faq />
+      </div>
+      <div className="p-10">
         <ContactForm />
         <Footer />
-
       </div>
+
       {/* <div className="absolute bottom-0 right-0 flex flex-col justify-end items-center  fixed gap-2 z-999">
         <div className="bg-neutral-200 text-[#1d332c] ml-[60px] text-sm font-bold w-fit h-fit p-2  rounded-xl  mr-[10px]  flex gap-2">
           <Mail height={18} width={18} className="font-bold" color="#f2ac83" />
