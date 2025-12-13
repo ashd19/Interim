@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const AboutUs = () => {
   motion;
   return (
-    <div className="flex flex-col z-[1999]  bg-[#fefff2] md:mt-0 mt-20">
+    <div className="flex flex-col z-[1999]  bg-[#fefff2] md:mt-0 mt-10">
       <div className="w-full   flex  md:flex-row flex-col md:gap-[155px] gap-5  items-start mt-10 ">
         <div className="flex  gap-1 items-center justify-start ">
           <CircleStop height={15} width={15} />

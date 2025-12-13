@@ -63,7 +63,7 @@ const Landing = () => {
     <div>
       <div className="w-full">
         <div className="mt-35">
-          <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4.5rem]  text-[#1d332c] inter-nav tracking-tight">
+          <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4.3rem]  text-[#1d332c] inter-nav tracking-tight">
             Your Ideas,
             <br />
             <div className="flex md:flex-row md:tracking-none tracking-tight flex-col ">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
@@ -72,7 +72,6 @@ const Landing = () => {
         </div>
         <div className="flex md:flex-row flex-col gap-5 mt-5 items-center justify-between mt-2">
           <div>
-            {/* Show current review */}
             <div className="flex flex-col gap-5">
               <div className="flex gap-1">
                 {Array.from({ length: currentReview.stars }).map((_, index) => (
@@ -121,7 +120,7 @@ const Landing = () => {
       </div>
       <motion.div
         style={isMobile ? {} : { y, marginBottom: y }}
-        className="vid md:mt-50 mt- "
+        className="vid md:mt-50 mt-15 "
         data-scroll
         data-scroll-speed="0.6"
       >
