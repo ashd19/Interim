@@ -36,7 +36,7 @@ export default function Awards() {
         </div>
       </div>
 
-      <div className="md:hidden    grid grid-cols-1 grid-rows-6  gap-3">
+      <div className="md:hidden  px-2 py-3   grid grid-cols-1 grid-rows-6  gap-3">
         <Badge />
         <Badge />
         <Badge />
