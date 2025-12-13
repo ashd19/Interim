@@ -12,13 +12,13 @@ const Footer = () => {
   motion;
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className=" ">
-      <div className="bg-[#1e3730] rounded-xl text-white min-h-screen  w-full py-3  flex flex-col ">
-        <div className="px-10 ">
-          <div className="flex items-center   gap-60">
+    <div className=" md:flex flex flex-col ">
+      <div className="bg-[#1e3730] rounded-xl text-white min-h-screen  w-full ssmd:py-3  flex flex-col ">
+        <div className="md:px-10 px-3 ">
+          <div className="flex items-center   md:gap-60">
             <div className="flex flex-col">
               {/* icon grid  */}
-              <div className="uppercase grid md:grid-rows-2 md:grid-cols-3 sm:grid-rows-6 sm:grid-cols-1      md:gap-x-4 mt-10 ">
+              <div className="uppercase grid grid-rows-2 grid-cols-3     md:gap-x-4 gap-x-2 md:mt-10 ">
                 {[
                   { name: "Instagram", component: Instagram },
                   { name: "Facebook", component: Facebook },
@@ -31,13 +31,13 @@ const Footer = () => {
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className="bg-[#2b413b]   text-white flex flex-col md:h-[130px] md:w-[190px] h-[65px] w-[55px] hover:scale-90  duration-1000 transition ease-in items-center justify-center mb-3  border-2 border-transparent hover:border-[#f2ac83] rounded-xl gap-3 "
+                    className="bg-[#2b413b]   text-white flex flex-col md:h-[130px] md:w-[190px] h-[100px] w-[85px]  hover:scale-90  duration-1000 transition ease-in items-center justify-center mb-3  border-2 border-transparent hover:border-[#f2ac83] rounded-xl gap-3 "
                   >
                     <div className="">
                       <Icon
                         className={
                           hoveredIndex === index
-                            ? "text-[#f2ac83]  "
+                            ? "text-[#f2ac83]"
                             : "text-white"
                         }
                       />
@@ -50,9 +50,9 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="jane@framer.com"
-                className="focus:border  focus:border-blue-600 bg-[#2b413b] p-3 rounded-lg mt-2   "
+                className="focus:border  focus:border-blue-600 bg-[#2b413b] p-3 rounded-lg mt-2 md:w-full    w-[290px]"
               />
-              <button className="cursor-pointer hover:text-white hover:bg-orange-400/80  bg-[#f2ac83] text-center text-[#1e3730] h-full w-[610px] font-medium mt-3 rounded-lg py-2">
+              <button className="cursor-pointer hover:text-white hover:bg-orange-400/80  bg-[#f2ac83] text-center text-[#1e3730] h-full md:w-full  w-[290px] font-medium mt-3 rounded-lg py-2">
                 Submit
               </button>
             </div>
@@ -109,25 +109,25 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
-          <h1 className="relative text-[#f2ac83] mr-8 text-[30vw] ml-5  tracking-tighter inter">
+        <div className="relative md:-mt-[80px] -mt-[140px]">
+          <h1 className="relative text-[#f2ac83] mr-8 md:text-[29em]  text-[6rem] ml-5 md:mb-0 mb-[38px]  tracking-tighter inter">
             interim
             <div
-              className="h-0.5 w-[1200px] ml-25 bg-neutral-500/90
-           bottom-0   -translate-y-20 "
+              className="h-0.5 md:w-[1200px] w-[290px] md:ml-25  bg-neutral-500/90
+           bottom-0   md:-translate-y-20  -translate-y-6"
             />
           </h1>
-          <div className="flex gap-90 px-20 absolute bottom-0 -translate-y-11  ">
-            <div className="flex gap-5 ml-15 ">
-              <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+          <div className="flex md:gap-90 md:px-20 absolute bottom-0 md:-translate-y-11 text-[0.8rem] md:text-[1.1rem] px-10  pl-1 pr-1 ">
+            <div className="flex md:gap-5 gap-3     md:mt-0 md:ml-15 md:flex-row flex-col  ">
+              <a className="hover:underline w-fit cursor-pointer    text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
                 Privacy Policy
               </a>
               <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
                 Terms
               </a>
             </div>
-            <div className="flex gap-5 ml-40">
-              <a className="hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
+            <div className="flex gap-5 md:mt-0   ml-40 md:flex-row flex-col">
+              <a className="hover:underline w-fit cursor-pointer   text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
                 ©Template by RealMehdi
               </a>
               <a className="ml-4 hover:underline w-fit cursor-pointer  text-white  transition-300 delay-200 ease-in hover:text-[#f2ac83]">
