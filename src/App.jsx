@@ -12,7 +12,7 @@ import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Review from "./components/Reviews";
 import Blogs from "./components/Blogs"
-import Specialities from "./components/Specialities";
+// import Specialities from "./components/Specialities";
 import ContactForm from "./components/ContactForm";
 
 const App = () => {
@@ -55,8 +55,8 @@ const App = () => {
         {/* <Specialities /> */}
       </div>
       <Blogs />
-      <div className="bg-[#fefff2] ">
 
+      <div className="bg-[#fffef2] ">
         <Faq />
       </div>
       <div className="p-10">

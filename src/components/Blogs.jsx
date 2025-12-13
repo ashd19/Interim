@@ -3,7 +3,7 @@ import BlogCard from '../subcomponents/BlogCard';
 export default function Blogs() {
   return (
     <>
-      <div className="bg-[#f6f7e9] relative min-h-screen w-full mt-20 pt-1 pb-1">
+      <div className=" bg-[#f7f6e9] relative min-h-screen w-full mt-20 pt-1 pb-1">
 
         <h1 className="text-[13rem]  interServices text-center  tracking-tight text-[#1e3730] mt-20 ">Blogs</h1>
         <div className="flex gap-1 absolute top-0 left-1/2 -translate-x-15 translate-y-43 items-center  justify-center">

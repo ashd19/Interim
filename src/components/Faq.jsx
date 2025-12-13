@@ -62,17 +62,17 @@ const Faq = () => {
 
   return (
     <div className="min-h-screen bg-[#f6f7e9] p-4 sm:p-6 lg:p-8 mb-20 pb-1 ">
-      <div className="max-w-7xl mx-auto mb-15 ">
+      <div className="max-w-8xl mx-auto mb-15 ">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between items-start">
           {/* Left side - Header */}
           <div className="flex flex-col justify-start lg:sticky lg:top-8 w-full lg:w-[600px]">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center  mb-4">
               <CircleStop height={15} width={15} className="text-[#1d332c]" />
-              <h2 className="text-xs sm:text-sm font-semibold tracking-wider text-[#1d332c]">
+              <h2 className="text-[0.8rem]    inter tracking-wider text-[#1d332c]">
                 FREQUENTLY ASKED QUESTIONS
               </h2>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight text-[#1d332c] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold md:leading-3  leading-none text-[#1d332c] tracking-tight">
               Your questions, our answers
             </h1>
           </div>
