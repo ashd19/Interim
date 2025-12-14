@@ -4,10 +4,11 @@ export default function BlogCard({ imgurl, tag, date, timeToRead, heading, }) {
         <>
             <a href="#">
 
-                <div className="bg-[#fefff2] rounded-xl px-3   md:w-[720px] md:h-[290px] w-full h-[250px] group overflow-hidden">
-                    <div className="flex gap-3">
-                        <div className="w-[260px] h-[260px] mt-4 overflow-hidden rounded-xl">
-                            <img src={imgurl} alt="" className="md:w-full md:h-full  w-[250px] h-[240px]   object-cover   rounded-xl transition-transform duration-700 ease-in group-hover:scale-110 " />
+                {/* <div className="bg-[#fefff2] rounded-xl px-3   md:w-[10px] md:h-[290px] w-full h-auto pb-4 md:pb-0 group overflow-hidden"> */}
+                <div className="md:w-[690px] md:h-[290px] bg-[#fefff2] rounded-xl px-3 group overflow-hidden">
+                    <div className="flex flex-col-reverse md:flex-row gap-3">
+                        <div className="w-full h-[200px] md:w-[260px] md:h-[260px] mt-4 overflow-hidden rounded-xl">
+                            <img src={imgurl} alt="" className="md:w-full md:h-full  w-full h-full   object-cover   rounded-xl transition-transform duration-700 ease-in group-hover:scale-110 " />
                         </div>
                         <div className="flex flex-col justify-between">
                             <div>
@@ -21,13 +22,11 @@ export default function BlogCard({ imgurl, tag, date, timeToRead, heading, }) {
                                     <div className="inter-nav text-[0.8rem] tracking-tight whitespace-nowrap text-[#1d332c] uppercase">{timeToRead} min read</div>
                                 </div>
                                 <div>
-                                    <h1 className="inter-nav text-[1.4rem] tracking-tight whitespace-nowrap leading-7 text-[#1d332c]">{heading}</h1>
+                                    <h1 className="inter-nav text-[1.4rem] tracking-tight md:whitespace-nowrap whitespace-normal leading-7 text-[#1d332c]">{heading}</h1>
                                 </div>
                             </div>
-
                             <div className="flex rounded-full items-center bg-[#f6f7e9] px-3 py-2 w-[100px] h-[25px]">
                                 <h1 className="text-[#1d332c] text-[0.7rem] inter-nav whitespace-nowrap">Read Post</h1>
-
                                 <div className="w-[25px] h-[15px] flex items-center justify-center rounded-full ml-2   bg-[#1e3730]">
                                     <ArrowRight color="white" height={13} width={12} className="" />
                                 </div>
@@ -35,6 +34,7 @@ export default function BlogCard({ imgurl, tag, date, timeToRead, heading, }) {
                         </div>
                     </div>
                 </div>
+                {/* </div> */}
             </a>
 
         </>

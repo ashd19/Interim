@@ -7,7 +7,7 @@ const Faqcomp = ({ text, isOpen, onClick }) => {
       className="rounded-xl cursor-pointer w-full min-h-[70px] sm:h-[80px] p-3 sm:p-4 flex justify-between items-center bg-black/4 group transition ease-in duration-300 "
       onClick={onClick}
     >
-      <h1 className="text-base sm:text-lg md:text-xl text-[#1d332c] font-medium pr-2 leading-snug">{text}</h1>
+      <h1 className="text-base sm:text-lg md:text-xl text-[#1d332c] font-medium pr-2 leading-snug inter-nav">{text}</h1>
       <div className={`bg-[#fefff2] group-hover:bg-orange-400/50 rounded-full min-w-[40px] w-[40px] h-[40px] sm:min-w-[50px] sm:w-[50px] sm:h-[50px] flex items-center justify-center transition-all duration-300 ${isOpen ? 'rotate-45 bg-orange-400/50' : ''}`}>
         <Plus className="w-5 h-5 sm:w-6 sm:h-6" />
       </div>
@@ -61,7 +61,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f7e9] p-4 sm:p-6 lg:p-8 mb-20 pb-1 ">
+    <div className="min-h-screen bg-[#f6f7e9] p-4 sm:p-6 lg:p-8 mb-20 pb-1">
       <div className="max-w-8xl mx-auto mb-15 ">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between items-start">
           {/* Left side - Header */}
@@ -80,7 +80,7 @@ const Faq = () => {
           {/* Right side - FAQ Items */}
           <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px]">
             {faqs.map((faq) => (
-              <div key={faq.id} className="w-full">
+              <div key={faq.id} className="w-full ">
                 <Faqcomp
                   text={faq.question}
                   isOpen={openId === faq.id}
@@ -92,7 +92,7 @@ const Faq = () => {
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${openId === faq.id ? 'max-h-96 mt-2' : 'max-h-0'
                     }`}
                 >
-                  <div className=" p-4 sm:p-6 text-[#1d332c] text-sm sm:text-base leading-relaxed">
+                  <div className=" p-4 sm:p-6 text-[#1d332c] text-sm sm:text-base leading-relaxed inter-faq ">
                     {faq.answer}
                   </div>
                 </div>

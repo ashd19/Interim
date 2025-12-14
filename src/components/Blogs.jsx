@@ -12,7 +12,7 @@ export default function Blogs() {
 
         </div>
 
-        <div className='px-10 grid md:grid-cols-2  md:grid-rows-2  grid-cols-1 grid-rows-4 gap-4 mb-20'>
+        <div className='px-10 grid md:grid-cols-2  md:grid-rows-2  grid-cols-1 grid-rows-4 gap-10 mb-20'>
           <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
           <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />
           <BlogCard imgurl={"https://framerusercontent.com/images/vONJRcDiOdig242Q3TiVm6E4.jpg?scale-down-to=512"} tag={"TIPS"} date={"Jun 6, 2024"} timeToRead={"5"} heading={<>5 Creative Tips for Adding Personality to <br /> Your Space </>} />

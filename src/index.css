@@ -18,6 +18,12 @@
   font-weight: 500;
   font-style: normal;
 }
+.inter-faq {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 .interServices {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
