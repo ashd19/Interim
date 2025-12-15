@@ -36,7 +36,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative   w-full overflow-hidden">
+    <div className="relative   w-full ">
 
       <Navbar />
       <div className="bg-[#fefff2] md:p-10  p-3">

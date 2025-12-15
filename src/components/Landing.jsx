@@ -66,7 +66,7 @@ const Landing = () => {
           <h1 className="md:text-hero md:leading-30 leading-none whitespace-nowrap text-[4.3rem]  text-[#1d332c] inter-nav tracking-tight">
             Your Ideas,
             <br />
-            <div className="flex md:flex-row md:tracking-none tracking-tight flex-col md:text-card text-[4.1rem] ">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
+            <div className="flex md:flex-row md:tracking-none tracking-tight flex-col md:text-card text-[3.9rem] ">Our Creative <span className="satisfy-regular md:ml-6">Twist</span></div>
 
           </h1>
         </div>
@@ -129,6 +129,7 @@ const Landing = () => {
           loop
           playsInline
           muted
+          autoPlay
           preload="auto"
           className="w-full h-full object-cover rounded-xl shadow-top-only "
         ></video>

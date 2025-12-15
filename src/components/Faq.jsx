@@ -65,7 +65,7 @@ const Faq = () => {
       <div className="max-w-8xl mx-auto mb-15 ">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between items-start">
           {/* Left side - Header */}
-          <div className="flex flex-col justify-start lg:sticky lg:top-8 w-full lg:w-[600px]">
+          <div className="flex flex-col justify-start w-full lg:w-[600px]">
             <div className="flex items-center  mb-4">
               <CircleStop height={15} width={15} className="text-[#1d332c]" />
               <h2 className="text-[0.8rem]    inter   tracking-wider text-[#1d332c]">

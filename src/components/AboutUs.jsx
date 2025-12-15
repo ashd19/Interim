@@ -14,7 +14,7 @@ const AboutUs = () => {
           </h1>
         </div>
         <div className="flex flex-col gap-10">
-          <h1 className="md:text-4xl text-3xl tracking-wider  inter-nav  text-[#1d332c]">
+          <h1 className="md:text-4xl text-xl tracking-wider  inter-nav  text-[#1d332c]">
             <span className="ml-10"></span>Founded in 2010, our studio started
             as a small team  of design enthusiasts with big dreams. At
             Interim, we're not just <br className="md:block hidden" /> about creating beautiful spaces –
@@ -41,8 +41,8 @@ const AboutUs = () => {
       </div>
 
       <div className="flex gap-1 items-center mt-15 ">
-        <CircleStop height={15} width={15} className="mb-0.5" />
-        <h1 className=" whitespace-nowrap font-semibold text-sm ">
+        <CircleStop height={15} width={15} className="md:mb-1" />
+        <h1 className=" whitespace-nowrap font-semibold md:text-sm text-md ">
           BY THE NUMBERS
         </h1>
       </div>

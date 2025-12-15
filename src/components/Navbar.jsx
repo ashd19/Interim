@@ -8,12 +8,14 @@ const Navbar = () => {
       <div className="">
         <div className="flex justify-between items-center">
           <div>
-            <img
-              src="https://framerusercontent.com/images/1tnrEkQ7iu9Nrkj27WcReIcvyM.png?scale-down-to=512"
-              alt=""
+            <a href="#">
+              <img
 
-              className="md:w-[130px] md:h-[45px] w-[120px] h-[40px]"
-            />
+                src="https://framerusercontent.com/images/1tnrEkQ7iu9Nrkj27WcReIcvyM.png?scale-down-to=512"
+                alt=""
+                className="md:w-[130px] md:h-[45px] w-[120px] h-[40px]"
+              />
+            </a>
           </div>
           <div className="hidden md:flex bg-[#f6f7e9] rounded-xl py-2 px-3 gap-6 items-center justify-center">
             {[
