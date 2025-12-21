@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -10,7 +10,6 @@ const Navbar = () => {
           <div>
             <a href="#">
               <img
-
                 src="https://framerusercontent.com/images/1tnrEkQ7iu9Nrkj27WcReIcvyM.png?scale-down-to=512"
                 alt=""
                 className="md:w-[130px] md:h-[45px] w-[120px] h-[40px]"
@@ -30,27 +29,61 @@ const Navbar = () => {
             ].map((item, index) => (
               <a
                 key={index}
-                className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-300 delay-200 ease-in  ${index == 0
-                  ? "hover:text-[#1d332c] bg-[#eae9dd] mb-0.5 h-[30px] w-[70px] flex items-center justify-center    rounded-lg "
-                  : "hover:text-[#f2ac83]"
-                  }`}
+                className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-300 delay-200 ease-in  ${
+                  index == 0
+                    ? "hover:text-[#1d332c] bg-[#eae9dd] mb-0.5 h-[30px] w-[70px] flex items-center justify-center    rounded-lg "
+                    : "hover:text-[#f2ac83]"
+                }`}
               >
                 {item}
               </a>
             ))}
           </div>
-          <div onClick={() => setShowMenu(!showMenu)} className="md:hidden  p-2 border border-black/40 rounded-xl">
-            <Menu color="#1d332c" />
+          <div
+            onClick={() => setShowMenu(!showMenu)}
+            className={`md:hidden p-2 rounded-xl transition-all duration-300 ease-in-out ${
+              showMenu ? "bg-[#1d332c]" : "border border-black/40"
+            }`}
+          >
+            {showMenu ? <X color="#f2ac83" /> : <Menu color="#1d332c" />}
           </div>
-          {showMenu && (
-            <div>
-
+          <div
+            className={`absolute top-20 left-0 w-full bg-[#fefff2] md:hidden transition-all duration-500 ease-in-out ${
+              showMenu
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-full pointer-events-none"
+            }`}
+          >
+            <div className="flex flex-col items-center gap-4 py-4">
+              {[
+                "Home",
+                "About",
+                "Services",
+                "Projects",
+                "Gallery",
+                "Blog",
+                "Reviews",
+                "Contact",
+              ].map((item, index) => (
+                <a
+                  key={index}
+                  href={`/${item}`}
+                  className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-all duration-300 ease-in-out ${
+                    index === 0
+                      ? "hover:text-[#1d332c] bg-[#eae9dd] px-12 py-2 rounded-lg"
+                      : "hover:text-[#f2ac83]"
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Navbar;  
+export default Navbar;
