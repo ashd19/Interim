@@ -4,7 +4,9 @@
   
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue? style=for-the-badge&logo=vercel)](https://interim-rho.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/ashd19/Interim)
+<br/>
 Inspiration website :- interim.framer.website
+<br/>
 ### [✨ View Live Demo →](https://interim-rho.vercel.app)
 
 </div>
