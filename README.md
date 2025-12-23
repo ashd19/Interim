@@ -4,14 +4,13 @@
   
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue? style=for-the-badge&logo=vercel)](https://interim-rho.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/ashd19/Interim)
-
+Inspiration website :- interim.framer.website
 ### [✨ View Live Demo →](https://interim-rho.vercel.app)
 
 </div>
 
 A premium furniture e-commerce experience crafted with meticulous attention to detail, where every pixel tells a story of comfort, elegance, and modern living.
 
-![Interim Banner](https://via.placeholder.com/1200x400/2c3e50/ffffff?text=Interim+Furniture+Store)
 
 ## 🎯 Overview
 
