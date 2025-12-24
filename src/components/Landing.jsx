@@ -36,7 +36,6 @@ const Landing = () => {
     },
   ];
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
@@ -95,7 +94,6 @@ const Landing = () => {
                 </span>
               </p>
 
-
             </div>
             <div className="flex gap-3 mt-10">
               {reviews.map((_, index) => (
@@ -112,9 +110,7 @@ const Landing = () => {
               With a commitment to sustainability and innovative solutions where
               we craft beautiful, functional spaces that stand the test of time.
             </p>
-            <div className="mt-4">
-              <Buttons title={"Buy Template"} />
-            </div>
+           
           </div>
         </div>
       </div>
@@ -139,3 +135,4 @@ const Landing = () => {
 };
 
 export default Landing;
+
