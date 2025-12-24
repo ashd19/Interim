@@ -44,17 +44,17 @@ export default function ContactForm() {
                     <div>
                         {/* Contact Details */}
                         <div className="space-y-4 mb-10">
-                            <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                            <div className="bg-white/5 rounded-xl p-5 flex flex-row justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
                                 <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">EMAIL</span>
-                                <span className="text-sm sm:text-base text-white inter-nav break-all sm:break-normal">interimstudio@email.com</span>
+                                <span className="text-sm sm:text-base text-white inter-nav  sm:">interimstudio@email.com</span>
                             </div>
                             <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
                                 <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">PHONE</span>
                                 <span className="text-sm sm:text-base text-white inter-nav">+1458741139</span>
                             </div>
-                            <div className="bg-white/5 rounded-xl p-5 flex justify-between items-start sm:items-center gap-3 group hover:bg-white/10 transition-all duration-300">
-                                <span className="text-xs font-medium tracking-tight whitespace-nowrap text-[#C4956A] inter-faq mt-1 sm:mt-0 shrink-0">OFFICE</span>
-                                <span className="text-sm sm:text-base text-white inter-nav text-left sm:text-right max-w-full sm:max-w-[70%]">123 Main Street Anytown, USA</span>
+                            <div className="bg-white/5 rounded-xl py-5 px-4 flex justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300 ">
+                                <span className="text-xs font-medium tracking-tight whitespace-nowrap text-[#C4956A] inter-faq mt- sm:mt-0 shrink-0">OFFICE</span>
+                                <span className="text-sm sm:text-base text-white inter-nav text- whitespace-nowrap  max-w-full mt-2 sm:max-w-[70%]">123 Main Street Anytown, <br /> <span className="flex justify-end">USA</span></span>
                             </div>
                         </div>
                     </div>
