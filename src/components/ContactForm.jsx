@@ -38,22 +38,24 @@ export default function ContactForm() {
 
     return (
         <main className="min-h-screen bg-[#2A4A42] mb-10 p-5 sm:p-10 rounded-3xl">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
+            <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0 h-full">
                 {/* Left Panel - Contact Info */}
-                <div className="w-full lg:w-[45%] text-white p-4 sm:p-8 lg:p-12">
-                    {/* Contact Details */}
-                    <div className="space-y-4 mb-10">
-                        <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
-                            <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">EMAIL</span>
-                            <span className="text-sm sm:text-base text-white inter-nav break-all sm:break-normal">interimstudio@email.com</span>
-                        </div>
-                        <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
-                            <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">PHONE</span>
-                            <span className="text-sm sm:text-base text-white inter-nav">+1458741139</span>
-                        </div>
-                        <div className="bg-white/5 rounded-xl p-5 flex flex- justify-between items-start sm:items-center gap-3 group hover:bg-white/10 transition-all duration-300">
-                            <span className="text-xs font-medium tracking-tight whitespace-nowrap text-[#C4956A] inter-faq mt-1 sm:mt-0 shrink-0">OFFICE</span>
-                            <span className="text-sm sm:text-base text-white inter-nav text-left sm:text-right max-w-full sm:max-w-[70%]">123 Main Street Anytown, USA</span>
+                <div className="w-full lg:w-[45%] text-white p-6 sm:p-10 lg:p-16 flex flex-col justify-between h-full">
+                    <div>
+                        {/* Contact Details */}
+                        <div className="space-y-4 mb-10">
+                            <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                                <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">EMAIL</span>
+                                <span className="text-sm sm:text-base text-white inter-nav break-all sm:break-normal">interimstudio@email.com</span>
+                            </div>
+                            <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                                <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">PHONE</span>
+                                <span className="text-sm sm:text-base text-white inter-nav">+1458741139</span>
+                            </div>
+                            <div className="bg-white/5 rounded-xl p-5 flex justify-between items-start sm:items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                                <span className="text-xs font-medium tracking-tight whitespace-nowrap text-[#C4956A] inter-faq mt-1 sm:mt-0 shrink-0">OFFICE</span>
+                                <span className="text-sm sm:text-base text-white inter-nav text-left sm:text-right max-w-full sm:max-w-[70%]">123 Main Street Anytown, USA</span>
+                            </div>
                         </div>
                     </div>
 
@@ -75,7 +77,7 @@ export default function ContactForm() {
                 </div>
 
                 {/* Right Panel - Form */}
-                <div className="w-full lg:w-[55%] bg-[#F4F4EB] p-6 sm:p-10 lg:p-16 rounded-3xl">
+                <div className="w-full lg:w-[55%] bg-[#F4F4EB] p-6 sm:p-10 lg:p-16 rounded-3xl flex flex-col h-auto lg:h-full">
                     <h1 className="text-3xl sm:text-5xl font-bold text-[#1E3A34] mb-4 inter tracking-tight leading-tight">
                         Get a Free Estimate
                     </h1>

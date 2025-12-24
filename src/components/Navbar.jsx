@@ -29,11 +29,10 @@ const Navbar = () => {
             ].map((item, index) => (
               <a
                 key={index}
-                className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-300 delay-200 ease-in  ${
-                  index == 0
+                className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-300 delay-200 ease-in  ${index == 0
                     ? "hover:text-[#1d332c] bg-[#eae9dd] mb-0.5 h-[30px] w-[70px] flex items-center justify-center    rounded-lg "
                     : "hover:text-[#f2ac83]"
-                }`}
+                  }`}
               >
                 {item}
               </a>
@@ -41,18 +40,16 @@ const Navbar = () => {
           </div>
           <div
             onClick={() => setShowMenu(!showMenu)}
-            className={`md:hidden p-2 rounded-xl transition-all duration-300 ease-in-out ${
-              showMenu ? "bg-[#1d332c]" : "border border-black/40"
-            }`}
+            className={`md:hidden p-2 rounded-xl transition-all duration-300 ease-in-out ${showMenu ? "bg-[#1d332c]" : "border border-black/40"
+              }`}
           >
             {showMenu ? <X color="#f2ac83" /> : <Menu color="#1d332c" />}
           </div>
           <div
-            className={`absolute top-20 left-0 w-full bg-[#fefff2] md:hidden transition-all duration-500 ease-in-out ${
-              showMenu
+            className={`absolute top-20 left-0 w-full bg-[#fefff2] md:hidden transition-all duration-500 ease-in-out ${showMenu
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 -translate-y-full pointer-events-none"
-            }`}
+              }`}
           >
             <div className="flex flex-col items-center gap-4 py-4">
               {[
@@ -68,11 +65,10 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={`/${item}`}
-                  className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-all duration-300 ease-in-out ${
-                    index === 0
+                  className={`cursor-pointer tracking-tight inter text-[#1d332c] inter-nav transition-all duration-300 ease-in-out ${index === 0
                       ? "hover:text-[#1d332c] bg-[#eae9dd] px-12 py-2 rounded-lg"
                       : "hover:text-[#f2ac83]"
-                  }`}
+                    }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   {item}
