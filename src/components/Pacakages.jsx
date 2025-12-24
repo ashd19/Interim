@@ -89,8 +89,8 @@ function PricingCard({ icon, title, price, features, buttonText, variant }) {
                 </div>
             </div> */}
             <div className="flex items-center justify-center  mb-8">
-                
-                <Buttons title={buttonText}/>
+
+                <Buttons title={buttonText} colorSwap={true} />
             </div>
 
         </div>

@@ -37,37 +37,37 @@ export default function ContactForm() {
     }
 
     return (
-        <main className="min-h-screen bg-[#2A4A42] mb-5 p-10 rounded-2xl">
-            <div className="flex flex-col lg:flex-row">
+        <main className="min-h-screen bg-[#2A4A42] mb-10 p-5 sm:p-10 rounded-3xl">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
                 {/* Left Panel - Contact Info */}
-                <div className="w-full lg:w-[45%] text-white p-8 lg:p-12">
+                <div className="w-full lg:w-[45%] text-white p-4 sm:p-8 lg:p-12">
                     {/* Contact Details */}
-                    <div className="space-y-4 mb-8">
-                        <div className="bg-white/5 rounded-lg p-5 flex justify-between items-center">
-                            <span className="text-sm font-medium tracking-wider text-gray-300">EMAIL</span>
-                            <span className="text-white">interimstudio@email.com</span>
+                    <div className="space-y-4 mb-10">
+                        <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                            <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">EMAIL</span>
+                            <span className="text-sm sm:text-base text-white inter-nav break-all sm:break-normal">interimstudio@email.com</span>
                         </div>
-                        <div className="bg-white/5 rounded-lg p-5 flex justify-between items-center">
-                            <span className="text-sm font-medium tracking-wider text-gray-300">PHONE</span>
-                            <span className="text-white">+1458741139</span>
+                        <div className="bg-white/5 rounded-xl p-5 flex flex-wrap justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                            <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">PHONE</span>
+                            <span className="text-sm sm:text-base text-white inter-nav">+1458741139</span>
                         </div>
-                        <div className="bg-white/5 rounded-lg p-5 flex justify-between items-center">
-                            <span className="text-sm font-medium tracking-wider text-gray-300">OFFICE</span>
-                            <span className="text-white">123 Main Street Anytown, USA, 2141</span>
+                        <div className="bg-white/5 rounded-xl p-5 flex flex- justify-between items-start sm:items-center gap-3 group hover:bg-white/10 transition-all duration-300">
+                            <span className="text-xs font-medium tracking-tight whitespace-nowrap text-[#C4956A] inter-faq mt-1 sm:mt-0 shrink-0">OFFICE</span>
+                            <span className="text-sm sm:text-base text-white inter-nav text-left sm:text-right max-w-full sm:max-w-[70%]">123 Main Street Anytown, USA</span>
                         </div>
                     </div>
 
                     {/* Opening Hours */}
-                    <div className="bg-white/5 rounded-lg p-6">
-                        <h3 className="text-sm font-medium tracking-wider text-gray-300 mb-6">OPENING HOURS</h3>
-                        <div className="space-y-4">
+                    <div className="bg-white/5 rounded-2xl p-5 sm:p-8">
+                        <h3 className="text-xs font-medium tracking-widest text-[#C4956A] mb-8 inter-faq uppercase">OPENING HOURS</h3>
+                        <div className="space-y-5">
                             {openingHours.map((item) => (
-                                <div key={item.day} className="flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                        <Clock className="w-5 h-5 text-[#C4956A]" />
-                                        <span className="text-white">{item.day}</span>
+                                <div key={item.day} className="flex flex-wrap items-center justify-between gap-2 group">
+                                    <div className="flex items-center gap-3 sm:gap-4">
+                                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#C4956A] group-hover:rotate-12 transition-transform shrink-0" />
+                                        <span className="text-white inter-nav text-sm sm:text-base">{item.day}</span>
                                     </div>
-                                    <span className="text-white">{item.hours}</span>
+                                    <span className="text-xs sm:text-sm text-white/80 inter-nav whitespace-nowrap">{item.hours}</span>
                                 </div>
                             ))}
                         </div>
@@ -75,155 +75,147 @@ export default function ContactForm() {
                 </div>
 
                 {/* Right Panel - Form */}
-                <div className="w-full lg:w-[55%] bg-[#F4F4EB] p-8 lg:p-12 rounded-2xl">
-                    <h1 className="text-4xl lg:text-5xl font-bold text-[#1E3A34] mb-4">Get a Free Estimate</h1>
-                    <p className="text-gray-600 mb-8">
+                <div className="w-full lg:w-[55%] bg-[#F4F4EB] p-6 sm:p-10 lg:p-16 rounded-3xl">
+                    <h1 className="text-3xl sm:text-5xl font-bold text-[#1E3A34] mb-4 inter tracking-tight leading-tight">
+                        Get a Free Estimate
+                    </h1>
+                    <p className="text-gray-600 mb-10 inter-nav leading-relaxed opacity-80">
                         Reach out to us immediately to arrange for a customised quotation from one of our assessors. Phone us or
                         complete the form provided below!
                     </p>
 
                     <form onSubmit={handleSubmit} className="space-y-5">
-                        {/* Name & Phone */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">NAME</label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">NAME</label>
                                 <input
                                     type="text"
                                     name="name"
                                     placeholder="Jane Smith"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">PHONE</label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">PHONE</label>
                                 <input
                                     type="tel"
                                     name="phone"
                                     placeholder="(123) 456-7890"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                                 />
                             </div>
                         </div>
 
-                        {/* Email */}
                         <div>
-                            <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">EMAIL</label>
+                            <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">EMAIL</label>
                             <input
                                 type="email"
                                 name="email"
                                 placeholder="jane@framer.com"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                             />
                         </div>
 
-                        {/* Project Type */}
                         <div>
-                            <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">PROJECT TYPE</label>
-                            <select
-                                name="projectType"
-                                value={formData.projectType}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 appearance-none cursor-pointer"
-                            >
-                                <option value="">Select...</option>
-                                {projectTypes.map((type) => (
-                                    <option key={type} value={type}>
-                                        {type}
-                                    </option>
-                                ))}
-                            </select>
+                            <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">PROJECT TYPE</label>
+                            <div className="relative">
+                                <select
+                                    name="projectType"
+                                    value={formData.projectType}
+                                    onChange={handleChange}
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav appearance-none cursor-pointer transition-all"
+                                >
+                                    <option value="">Select...</option>
+                                    {projectTypes.map((type) => (
+                                        <option key={type} value={type}>
+                                            {type}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
 
-                        {/* Location, Budget, Project Size */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">LOCATION</label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">LOCATION</label>
                                 <input
                                     type="text"
                                     name="location"
                                     placeholder="City, State"
                                     value={formData.location}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">BUDGET</label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">BUDGET</label>
                                 <input
                                     type="text"
                                     name="budget"
                                     placeholder="Enter your budget"
                                     value={formData.budget}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">
-                                    PROJECT SIZE (SQFT)
-                                </label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">PROJECT SIZE (SQFT)</label>
                                 <input
                                     type="text"
                                     name="projectSize"
                                     placeholder="e.g., 1500"
                                     value={formData.projectSize}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all"
                                 />
                             </div>
                         </div>
 
-                        {/* Start Date & Completion Date */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">
-                                    PREFERRED START DATE
-                                </label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">PREFERRED START DATE</label>
                                 <input
                                     type="date"
                                     name="startDate"
                                     value={formData.startDate}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav transition-all"
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">
-                                    DESIRED COMPLETION DATE
-                                </label>
+                                <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">DESIRED COMPLETION DATE</label>
                                 <input
                                     type="date"
                                     name="completionDate"
                                     value={formData.completionDate}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800"
+                                    className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav transition-all"
                                 />
                             </div>
                         </div>
 
-                        {/* Message */}
                         <div>
-                            <label className="block text-xs font-medium tracking-wider text-gray-600 mb-2">MESSAGE</label>
+                            <label className="block text-[10px] font-semibold tracking-[0.2em] text-[#1E3A34] mb-3 inter-faq uppercase">MESSAGE</label>
                             <textarea
                                 name="message"
                                 placeholder="Write your message here"
                                 rows={4}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A34] text-gray-800 placeholder:text-gray-400 resize-none"
+                                className="w-full px-5 py-4 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8A57A] text-[#1E3A34] inter-nav placeholder:text-gray-300 transition-all resize-none"
                             />
                         </div>
 
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-full py-4 bg-[#E8A57A] hover:bg-[#D9956B] text-[#1E3A34] font-semibold rounded-lg transition-colors"
+                            className="w-full py-5 bg-[#E8A57A] hover:bg-[#D9956B] text-[#1E3A34] font-bold rounded-2xl transition-all duration-300 inter uppercase tracking-widest text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                         >
                             Request Free Estimate
                         </button>
