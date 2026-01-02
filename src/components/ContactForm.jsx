@@ -39,10 +39,8 @@ export default function ContactForm() {
     return (
         <main className="min-h-screen bg-[#2A4A42] mb-10 p-5 sm:p-10 rounded-3xl">
             <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0 h-full">
-                {/* Left Panel - Contact Info */}
                 <div className="w-full lg:w-[45%] text-white p-6 sm:p-10 lg:p-16 flex flex-col justify-between h-full">
                     <div>
-                        {/* Contact Details */}
                         <div className="space-y-4 mb-10">
                             <div className="bg-white/5 rounded-xl p-5 flex flex-row justify-between items-center gap-3 group hover:bg-white/10 transition-all duration-300">
                                 <span className="text-xs font-medium tracking-widest text-[#C4956A] inter-faq shrink-0">EMAIL</span>
@@ -59,7 +57,6 @@ export default function ContactForm() {
                         </div>
                     </div>
 
-                    {/* Opening Hours */}
                     <div className="bg-white/5 rounded-2xl p-5 sm:p-8">
                         <h3 className="text-xs font-medium tracking-widest text-[#C4956A] mb-8 inter-faq uppercase">OPENING HOURS</h3>
                         <div className="space-y-5">
@@ -76,7 +73,6 @@ export default function ContactForm() {
                     </div>
                 </div>
 
-                {/* Right Panel - Form */}
                 <div className="w-full lg:w-[55%] bg-[#F4F4EB] p-6 sm:p-10 lg:p-16 rounded-3xl flex flex-col h-auto lg:h-full">
                     <h1 className="text-3xl sm:text-5xl font-bold text-[#1E3A34] mb-4 inter tracking-tight leading-tight">
                         Get a Free Estimate
